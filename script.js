@@ -14,18 +14,16 @@ showMenu('nav-toggle', 'nav-menu');
 
 /*===== REMOVE MENU MOBILE =====*/
 const navLink = document.querySelectorAll('.nav__link');
+const navClose = document.getElementById('nav-close');
+const navMenu = document.getElementById('nav-menu');
 
 function linkAction() {
-    const navMenu = document.getElementById('nav-menu');
     navMenu.classList.remove('show-menu');
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /*===== CLOSE MENU WITH CLOSE BUTTON =====*/
-const navClose = document.getElementById('nav-close');
-const navMenu = document.getElementById('nav-menu');
-
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
@@ -68,10 +66,12 @@ window.addEventListener('scroll', scrollHeader);
 /*===== SHOW SCROLL TO TOP =====*/
 function scrollTop() {
     const scrollTop = document.getElementById('scroll-top');
-    if (this.scrollY >= 560) {
-        scrollTop.classList.add('show-scroll');
-    } else {
-        scrollTop.classList.remove('show-scroll');
+    if (scrollTop) {
+        if (this.scrollY >= 560) {
+            scrollTop.classList.add('show-scroll');
+        } else {
+            scrollTop.classList.remove('show-scroll');
+        }
     }
 }
 
@@ -486,7 +486,6 @@ document.addEventListener('keydown', (e) => {
 
 // Focus management for mobile menu
 const navToggle = document.getElementById('nav-toggle');
-const navClose = document.getElementById('nav-close');
 
 if (navToggle) {
     navToggle.addEventListener('click', () => {
