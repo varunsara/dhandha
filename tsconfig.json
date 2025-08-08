@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@dhandha/ui": ["./packages/ui/src"],
+      "@dhandha/ui/*": ["./packages/ui/src/*"],
+      "@dhandha/database": ["./packages/database/src"],
+      "@dhandha/database/*": ["./packages/database/src/*"],
+      "@dhandha/utils": ["./packages/utils/src"],
+      "@dhandha/utils/*": ["./packages/utils/src/*"],
+      "@dhandha/types": ["./packages/types/src"],
+      "@dhandha/types/*": ["./packages/types/src/*"],
+      "@dhandha/config": ["./packages/config/src"],
+      "@dhandha/config/*": ["./packages/config/src/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/.next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "dist"
+  ]
+}
